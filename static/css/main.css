@@ -1,17 +1,32 @@
-body{
-
-margin:0;
-}
-
-.logo{
-        font-family : arial;
-        font-size: 24px;
-        margin: 25px;
-        width: 350px;
-        height: 200px;
-        outline: dashed 1px black;
-    
-}
-h1{
+body {
+    font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
 }
