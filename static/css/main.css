@@ -1,32 +1,132 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+body{
+
+margin:0;
 }
 
-p {
-    margin-bottom: 10px;
-}
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+h1{
+    
+         color: #0CCC08;
+        font-family: Wanted Sans;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: left; 
+        margin-left : 76px; margin-top: 22px; margin-bottom: 22px;
+}
+h2{
+    position:relative;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
+    font-size: 30px; 
+    top:200px; 
+    
+}
+.nav {
+    display: flex;
+    position:absolute;
+    left: 73%;
+    top: 10px;
+    align-items: center;
+    
+}
+.button_login_top {
+    /* 로그인 버튼 스타일 */
+    margin-left: 30px; /* 이 부분이 버튼을 오른쪽으로 밀어냄 */
+    padding: 8px 30px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    font-size: 20px;
+   
+    
+    border-radius: 5px;
     cursor: pointer;
+}
+.button_login_top:hover{
+    background-color: #000000;
+    color:#ffffff;
+
+}
+.nav img {
+    margin-right: 5px;
+}
+
+.nav p {
+    margin: 0 10px;
+}
+/* .nav{
+
+position: absolute;
+left: 70%;
+top:10px;
+width:300px;
+} */
+/* .icon_check{
+position: absolute;
+left: 70%;
+top: 10px;
+
+}
+.icon_pofo{
+    position: absolute;
+left: 83%;
+top:10px;
+
+} */
+.button_login {
+    position: relative;
+    padding: 8px 30px;
+    left:40%;
+    top:220px;
+    background-color: #000000;
+    color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 10px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.button_sign {
+    position:relative;
+    padding: 8px 30px;
+
+    margin:0px;
+    left:43%;
+    top:220px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    
+    font-size: 25px;
+    
+    text-transform: uppercase;
+    margin: 10px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.button_sign:hover {
+    background-color: #000000;
+    color:#ffffff;
+}
+.button_login:hover{
+    background-color: #ffffff;
+    color:#000000;
+    border:1px solid black;
 }
 
-button:hover {
-    background-color: #45a049;
+.green{
+   position: absolute;
+    top:550px;
+   
+    
+
+
 }
 
-button:active {
-    background-color: #3e8e41;
-}
