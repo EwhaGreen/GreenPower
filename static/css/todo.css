@@ -11,6 +11,11 @@ body {
     background-color: #f9f9f9;
     padding: 20px;
 }
+hr {
+    width: 80%; /* 원하는 가로 길이로 조절 */
+    border-top: 2px solid #000;
+    margin: 0 auto; /* 중앙 정렬을 위한 마진 설정 */
+}
 
 /* Main Title Styling */
 h1 {
@@ -23,7 +28,7 @@ h1 {
 h2 {
     font-size: 28px;
     margin-top: 30px;
-    color: #555;
+    color: #000;
 }
 
 /* Tertiary Title Styling */
@@ -120,22 +125,10 @@ textarea {
     border-color: rgb(255, 255, 255);
 }
 
-/* Individual Activities Styling */
 .individual-activities {
     border-color: #000;
 }
 
-.activity-checklist{
-    font-size: large;
-    font-weight: 300;
-    margin: 10px;
-}
-
-.activity-feeling{
-    font-size: large;
-    font-weight: 600;
-    margin: 10px;
-}
 
 .long-button-gray {
     width: 80%; /* 가로 너비를 80%로 설정 */
@@ -168,4 +161,64 @@ textarea {
 
 .long-button-green:hover {
     background-color: #237134; /* 호버 상태에서 미세한 색상 변화 */
+}
+
+
+
+
+.activity-title-container{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #b7cce3;
+}
+.activity-title-content{
+    font-size: xx-large;
+    font-weight: 600;
+    margin-right: 100px;
+}
+.activity-title-button{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 100px; /* 원하는 둥근 정도 */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+}
+.activity-title-button:hover{
+    background-color: #4dba75;
+}
+.activity-content-container{
+    margin: 30px;
+}
+
+.activity-content-title{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.activity-content-checklist{
+    font-size: medium;
+    font-weight: 300;
+    padding: 15px;
+}
+
+.activity-content-text {
+    font-size: medium;
+    font-weight: 300;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
 }
