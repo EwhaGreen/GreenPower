@@ -163,7 +163,7 @@ body{
     }
     .activity-container {
         position:absolute;
-        width:500px;
+        
         top: 320px;
         left: 500px;
         display: grid;
@@ -171,6 +171,7 @@ body{
         gap: 20px;
         padding: 20px;
         width: 800px;
+        
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -181,7 +182,7 @@ body{
         padding: 15px;
         margin: 30px;
         width: 300px;
-        height: 200px;
+        height: 700px;
         flex-shrink: 0;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -191,11 +192,12 @@ body{
     
     .activity-card h4 {
        position: relative;
-        left: -50px;
-        top: 1px;
+        left: -80px;
+        top: 10px;
         margin-top: 10px;
         margin-bottom: 5px;
         color: #333;
+        font-size: 20px;
     }
     .activity-card p {
         margin-bottom: 10px;
@@ -223,9 +225,9 @@ body{
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 10px;
             left:18px;
-            top: 15px;
+            top: 35px;
             width: 250px;
             padding: 5px;
     }
