@@ -22,5 +22,13 @@ def read_todo():
 def read_total_portfolio():
     return render_template("total-portfolio.html")
 
+@application.route("/todo_insert")
+def insert_todo():
+    return render_template("todo-insert.html")
+
+@application.route("/activity_insert")
+def insert_activity():
+    return render_template("personal_insert.html")
+
 if __name__ == "__main__":
     application.run(host='0.0.0.0')
