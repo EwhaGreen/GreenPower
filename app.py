@@ -26,8 +26,12 @@ def read_total_portfolio():
 def insert_todo():
     return render_template("todo-insert.html")
 
-@application.route("/activity_insert")
-def insert_activity():
+@application.route("/group_insert")
+def insert_group_activity():
+    return render_template("group_insert.html")
+
+@application.route("/personal_insert")
+def insert_personal_activity():
     return render_template("personal_insert.html")
 
 if __name__ == "__main__":
