@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div style ="width : 1440px;"></div>
+    <link rel="stylesheet" type="text/css" href="../static/css/todo_portfoliowrite.css">
+</head>
+<body>
+    <header class ="logo"><h1>PORTODO</h1>
+    <div class = "nav">
+    <img class="icon_check" src="/static/images/check.png">
+    <p> To-Do</p>
+    <img class="icon_pofo" src="/static/images/pofo.png">
+    <p>Portfolio</p>
+    <button class="button_login_top">로그인</button> 
+    </div>
+    </header>
+    <hr width="100%" style = "border-bottom: 1px solid  #A8A8A8;">
+
+    <h7 style="position:absolute;
+    left:290px;
+    top:120px;
+    color: #0CCC08;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;">2024년</h7>
+    <div class="month_selector">
+       
+        <div class="month_button" onclick="setActiveMonth(this)">1월</div>
+        <div class="month_button"onclick="setActiveMonth(this)">2월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">3월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">4월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">5월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">6월</div>
+        <div class="month_button"onclick="setActiveMonth(this)">7월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">8월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">9월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">10월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">11월</div>
+        <div class="month_button" onclick="setActiveMonth(this)">12월</div>
+    </div>
+    <div class="profile-card">
+        <img src="/static/images/people.png" alt="프로필 이미지">
+        <h3>김이화</h3>
+        <p style="float:left;left: 25px;">컴퓨터공학과</p><p style="float:left; left: 50px;">22학번</p>
+        <p style="top:80px;left:-130px;">희망진로</p><p style="float:left;left:-20px;top: 25px;">백엔드 개발자</p>
+        <div class="profile-action">프로필 수정</div>
+    </div>
+    <div class="active_write">
+        활동 기록</div>
+    <div class="active_recommend">
+        활동 추천</div>
+    <div class="ai_text">작성한 TO-DO를 바탕으로 AI가 활동기록을 작성했어요!</div>
+
+
+    <p style="position:absolute; top:330px; left:550px; color: #5F5F5F;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;">단체활동</p>
+    <div class= "activitywrite-card-wrap">
+    <div class="activitywrite-card">
+        <div class="activitywrite-header">
+            <div class="activitywrite-tag">이화 컴퓨터동아리</div>
+            <div class="activitywrite-tag id2">동아리</div>
+        </div>
+        <div class="activitywrite-content">
+            <h7>활동 사항</h7>
+            <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+        </div>
+        <div class="activitywrite-content"style="postion:relative; left:400px;">
+            <h7>느낀점</h7>
+            <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+        </div>
+        <div class="activitywrite-footer">
+           <p>관련 링크</p>
+           <input type="text" class="link_input"  placeholder="해당 활동 관련 링크">
+
+        </div>
+    </div>
+    <div class="activitywrite-card" style="position:relative; top:350px;">
+        <div class="activitywrite-header">
+            <div class="activitywrite-tag">이화 컴퓨터동아리</div>
+            <div class="activitywrite-tag id2">동아리</div>
+        </div>
+        <div class="activitywrite-content">
+            <h7>활동 사항</h7>
+            <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+        </div>
+        <div class="activitywrite-content" style="position:relative; left:100px;top: 55px">
+            <h7>느낀점</h7>
+            <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+        </div>
+        <div class="activitywrite-footer">
+           <p>관련 링크</p>
+           <input type="text" class="link_input"  placeholder="해당 활동 관련 링크">
+
+        </div>
+    </div>
+</div>
+
+
+<p style="position:relative; top:370px; left:550px; color: #5F5F5F;
+font-family: Pretendard;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;">개인활동</p>
+<div class= "activitywrite-card-wrap" style="position:relative;  top:60px;">
+<div class="activitywrite-card">
+    <div class="activitywrite-header">
+        <div class="activitywrite-tag">이화 컴퓨터동아리</div>
+        <div class="activitywrite-tag id2">동아리</div>
+    </div>
+    <div class="activitywrite-content">
+        <h7>활동 사항</h7>
+        <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+    </div>
+    <div class="activitywrite-content"style="postion:relative; left:400px; ">
+        <h7>느낀점</h7>
+        <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+    </div>
+    <div class="activitywrite-footer">
+       <p>관련 링크</p>
+       <input type="text" class="link_input"  placeholder="해당 활동 관련 링크">
+
+    </div>
+</div>
+<div class="activitywrite-card" style="position:relative; top:350px;" >
+    <div class="activitywrite-header">
+        <div class="activitywrite-tag">이화 컴퓨터동아리</div>
+        <div class="activitywrite-tag id2">동아리</div>
+    </div>
+    <div class="activitywrite-content">
+        <h7>활동 사항</h7>
+        <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+    </div>
+    <div class="activitywrite-content" style="position:relative; left:100px;top:55px;">
+        <h7>느낀점</h7>
+        <p>html, css, javascript 공부를 했다. 팀원들과 함께 활동하여 학습의 시간을 제작을 도와주는 웹사이트를 직접 개발해봤다.</p>
+    </div>
+    <div class="activitywrite-footer">
+       <p>관련 링크</p>
+       <input type="text" class="link_input"  placeholder="해당 활동 관련 링크">
+
+    </div>
+</div>
+</div>
+
+
+
+
+    
+    <script>
+        function setActiveMonth(selectedElement) {
+            document.querySelectorAll('.month_button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+            
+            selectedElement.classList.add('active');
+        }
+    </script>
+
+
+</body></html>

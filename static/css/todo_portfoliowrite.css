@@ -1,0 +1,376 @@
+body{
+
+    margin:0;
+    }
+    
+    
+    .logo h1{
+        
+             color: #0CCC08;
+            font-family: Wanted Sans;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: left; 
+            margin-left : 76px; margin-top: 22px; margin-bottom: 22px;
+    }
+    /* h2{
+        position:relative;
+        text-align: center;
+        font-size: 30px; 
+        top:200px; 
+        
+    } */
+    .active_write{
+        position:absolute;
+        top: 230px;
+        /* left:430px; */
+        left: 33%;
+        width: 110px;
+        height: 30px;
+        flex-shrink: 0;
+        color: var(--text, #111);
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        text-align: center;
+        line-height: normal;
+    
+        border-bottom: 2px solid var(--text, #111);
+        background: #FFF;
+        }
+    .active_recommend{
+        position:absolute;
+        top: 230px;
+        /* left:430px; */
+        left:41%;
+        width: 110px;
+        height: 30px;
+        flex-shrink: 0;
+        color: #888;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        text-align: center;
+        line-height: normal;
+    
+        background: #FFF;
+        }
+    .nav {
+        display: flex;
+        position:absolute;
+        left: 70%;
+        top: 10px;
+        align-items: center;
+        
+    }
+    .button_login_top {
+        /* 로그인 버튼 스타일 */
+        margin-left: 30px; /* 이 부분이 버튼을 오른쪽으로 밀어냄 */
+        padding: 8px 30px;
+        background-color: #ffffff;
+        color: black;
+        border: 1px solid black;
+        font-size: 20px;
+       
+        
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button_login_top:hover{
+        background-color: #000000;
+        color:#ffffff;
+    
+    }
+    .nav img {
+        margin-right: 5px;
+    }
+    
+    .nav p {
+        margin: 0 10px;
+    }
+    .month_selector {
+        position:absolute;
+        left:270px;
+        top:150px;
+        display: flex; 
+        align-items: center; 
+        gap: 10px;
+    }
+    .month_button {
+        padding: 10px 20px; 
+        border: none; 
+        background-color: transparent;
+        cursor: pointer; 
+    }
+    .month_button.active {
+        background-color: #4CAF50; 
+        color: white; 
+        border-radius: 4px; 
+    }
+    .month_button:hover {
+        background-color: #ddd; 
+        
+    }
+    .profile-card {
+        position:absolute;
+        left: 200px;
+        top:250px;
+        width: 250px;
+        height: 400px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .profile-card img {
+        position:relative;
+        top: 30px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .profile-card h3 {
+        position:relative;
+        top: 30px;
+        margin: 10px 0;
+    }
+
+    .profile-card p {
+        position:relative;
+        top: 30px;
+        color: #888;
+        line-height: 1.5;
+    }
+
+    .profile-card .profile-action {
+        position:relative;
+        top: 30px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+.ai_text{
+        position:absolute;
+        top:280px;
+        left:550px;
+        display: block;
+        padding: 8px 12px;
+        margin: 5px auto;
+        
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 10px;
+        background: #E3F8E3;
+        cursor: pointer;
+        font-size: 15px;
+        width: 400px;
+        text-align: center;
+}
+
+.activitywrite-card {
+    position:relative;
+    top:330px;
+    left:530px;
+    width:780px;
+    height: 300px;
+   
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+    
+    
+    
+}
+
+.activitywrite-content h7{
+    color: #000;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -130px;
+    top:10px;
+}
+.activitywrite-content p{
+    color: #3D3D3D;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 153.333% */
+    letter-spacing: -0.24px;
+    width: 370px;
+    height: 90px;
+
+}
+.activitywrite-header {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    float:left;
+}
+.activitywrite-tag {
+    background-color: #e7e7e7;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #DEE7FF;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #215FFF;
+font-family: Pretendard;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    
+}
+.activitywrite-tag.id2 {
+    background-color: #c7c7c7;
+    color: rgb(93, 91, 91);
+}
+
+.activitywrite-content {
+    position:absolute;
+    top:70px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 170px;
+    flex-wrap: wrap;
+    display: flex;
+    float:left;
+    justify-content: center;
+    text-align: center;
+    
+   
+
+}
+.activitywrite-footer {
+    position:absolute;
+    left:100px;
+    top:260px;
+    font-size: 14px;
+    color: #333;
+}
+.activitywrite-footer p{
+    position:absolute;
+    left:-80px;
+    top:5px;
+    font-size: 18px;
+}
+
+.link_input{
+    margin:10px;
+    margin-bottom: 5px;
+    
+    width: 600px; /* 입력 필드의 너비 */
+    padding: 10px; /* 입력 필드 내부의 여백 */
+    border: 1px solid #ccc; /* 입력 필드의 테두리 스타일 */
+    border-radius: 4px; /* 입력 필드의 모서리 둥글기 */
+    font-size: 15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .activity-container {
+        position:absolute;
+        width:500px;
+        top: 320px;
+        left: 500px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        width: 800px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+    }
+    .activity-card {
+        
+        background-color: #fff;
+        padding: 15px;
+        margin: 30px;
+        width: 300px;
+        height: 500px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .activity-card h4 {
+       position: relative;
+        left: -50px;
+        top: 1px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    .activity-card p {
+        margin-bottom: 10px;
+        color: #666;
+    }
+    .activity-button {
+        display: block;
+        padding: 8px 12px;
+        margin: 5px auto;
+        background-color: #7b7b7b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .activity-button.red {
+        background-color: #f44336;
+    }
+    .activity-button.blue{
+        background-color: #4a69bf;
+    }
+    .activity-button-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            left:18px;
+            top: 15px;
+            width: 250px;
+            padding: 5px;
+    } */
