@@ -1,39 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/todo.css">
 </head>
+
 <body>
-    <h1>3월</h1>
-    <ul>
-        <li><span>18일 월</span></li>
-        <li><span>19일 화</span></li>
-        <li><span>20일 수</span></li>
-        <li><span>21일 목</span></li>
-        <li><span>22일 금</span></li>
-        <li><span>23일 토</span></li>
-        <li><span>24일 일</span></li>
-    </ul>
+  <h1>3월</h1>
+  <ul style="display: flex">
+    <li><span>18일 월</span></li>
+    <li><span>19일 화</span></li>
+    <li><span>20일 수</span></li>
+    <li><span>21일 목</span></li>
+    <li><span>22일 금</span></li>
+    <li><span>23일 토</span></li>
+    <li><span>24일 일</span></li>
+  </ul>
+
+  <div class="grid-container">
+    <div class="group-activities">
+      <div class="activity-header">
+        <h1>단체 활동</h1>
+        <hr>
+        <button class="long-button-gray" onclick="location.href='/activity_insert'">활동 추가하기</button><br />
+      </div>
 
 
-    <h1>단체 활동</h1>
-    <button>활동 추가하기</button><br/>
 
-    <input placeholder="동아리"/><button>+</button><br/>
 
-    <ul>
-        <li><button>O</button><input placeholder="할 일 입력"></input></li>
-    </ul>
-    
-    <ul>
-        <li><button>O</button><span>할일할일할일</span></li>
-        <li><button>O</button><span>할일할일할일</span></li>
-    </ul>
+      <div class="activity-container">
+        <div class="activity-title-container">
+          <div class="activity-title-content">이화 컴퓨터동아리22</div>
+          <button class="activity-title-button" onclick="location.href='/activity_insert'">+</button><br />
+        </div>
 
-    <label for="comment">오늘의 한 줄</label><br/>
-    <textarea id="comment" placeholder="오늘 이 활동을 하며 어떤 것을 느꼈나요?"></textarea>
-    <button type="submit">작성완료</button>
+        <div class="activity-content-container">
+          <div class="activity-content-title">할일</div><br />
+          <div class="activity-content-checklist">
+            <ul>
+              <li><span>✓</span><span>할일할일할일</span></li>
+              <li><span>☐</span><span>할일할일할일</span></li>
+              <li><span>☐</span><span>할일할일할일</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="activity-content-container">
+          <div class="activity-content-title">느낀점</div><br />
+          <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
+            만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
+            선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
+            나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
+            지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="individual-activities">
+      <div class="activity-header">
+        <h1>개인 활동</h1>
+        <hr>
+        <button class="long-button-gray" onclick="location.href='/activity_insert'">활동 추가하기</button><br />
+      </div>
+
+
+
+
+      <div class="activity-container">
+        <div class="activity-title-container">
+          <div class="activity-title-content">이화 컴퓨터동아리22</div>
+          <button class="activity-title-button" onclick="location.href='/activity_insert'">+</button><br />
+        </div>
+
+        <div class="activity-content-container">
+          <div class="activity-content-title">할일</div><br />
+          <div class="activity-content-checklist">
+            <ul>
+              <li><span>✓</span><span>할일할일할일</span></li>
+              <li><span>☐</span><span>할일할일할일</span></li>
+              <li><span>☐</span><span>할일할일할일</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="activity-content-container">
+          <div class="activity-content-title">느낀점</div><br />
+          <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
+            만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
+            선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
+            나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
+            지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
+        </div>
+    </div>
 </body>
+
 </html>

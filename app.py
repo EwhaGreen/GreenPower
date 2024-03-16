@@ -10,5 +10,25 @@ DB = DBhandler()
 def hello():
     return render_template("main.html")
 
+@application.route("/login")
+def login():
+    return render_template("login.html")
+
+@application.route("/todo")
+def read_todo():
+    return render_template("todo.html")
+
+@application.route("/portfolio")
+def read_total_portfolio():
+    return render_template("total-portfolio.html")
+
+@application.route("/todo_insert")
+def insert_todo():
+    return render_template("todo-insert.html")
+
+@application.route("/activity_insert")
+def insert_activity():
+    return render_template("personal_insert.html")
+
 if __name__ == "__main__":
     application.run(host='0.0.0.0')
