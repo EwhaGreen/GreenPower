@@ -1,7 +1,10 @@
 {% extends "navbar.html" %} 
 {% block content %}
 <h2>매일의 할 일을 작성하고 체크하면 <br> 포트폴리오가 자동 생성돼요!</h2>
-    <button class="button_login" onclick="location.href='/login'">로그인</button>
-    <button class="button_sign">회원가입</button>
+    {% if session['id'] %}
+    <button class="button_link_todo" onclick="location.href='/todo'">TO-DO 바로가기</button> 
+    {% else %}
+    <button class="button_login" onclick="location.href='/todo'">TO-DO 바로가기</button>
+    {% endif %}
     <img class="green" src="/static/images/green.png"> 
 {% endblock %}
