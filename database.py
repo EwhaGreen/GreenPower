@@ -79,7 +79,7 @@ class DBhandler:
                 return True, user.val()['name']
         return False, None
 
-# 단체 활동 DB로 전송
+# 단체 활동 DB로 전송(Create)
     def add_group_activity(self, kind, name):
         new_group_activity = {
             "kind":kind,
@@ -88,7 +88,7 @@ class DBhandler:
 
         self.db.child("group_activities").push(new_group_activity)
 
-# 개인 활동 DB로 전송
+# 개인 활동 DB로 전송(Create)
     def add_personal_activity(self, kind, name):
         new_personal_activity = {
             "kind":kind,
@@ -96,6 +96,45 @@ class DBhandler:
         }
 
         self.db.child("personal_activities").push(new_personal_activity)
+
+# 단체 활동 DB에서 불러오기(Read)
+    def get_group_activities(self):
+        # Firebase에서 group_activities 데이터를 조회
+        activities = self.db.child("group_activities").get()
+        if activities.val():
+            # 조회된 데이터를 리스트로 변환하여 반환
+            return [{"id": activity.key(), "kind": activity.val()['kind'], "name": activity.val()['name']} for activity in activities.each()]
+        else:
+            # 데이터가 없는 경우 빈 리스트 반환
+            return []
+
+# 개인 활동 DB에서 불러오기(Read)
+    def get_personal_activities(self):
+         # Firebase에서 personal_activities 데이터를 조회
+        activities = self.db.child("personal_activities").get()
+        if activities.val():
+            # 조회된 데이터를 리스트로 변환하여 반환
+            return [{"id": activity.key(), "kind": activity.val()['kind'], "name":activity.val()['name']} for activity in activities.each()]
+        else:
+            # 데이터가 없는 경우 빈 리스트 반환
+            return []
+        
+# 특정 단체 활동을 ID로 조회(Read)
+    def get_group_activity_by_id(self, activity_id):
+        activity = self.db.child("group_activities").child(activity_id).get()
+        if activity.val():
+            return activity.val()
+        else:
+            return None
+
+# 특정 개인 활동을 ID로 조회(Read)
+    def get_personal_activity_by_id(self, activity_id):
+        activity = self.db.child("personal_activities").child(activity_id).get()
+        if activity.val():
+            return activity.val()
+        else:
+            return None
+        
 
 # DBhandler 인스턴스 생성
 db_handler = DBhandler()
