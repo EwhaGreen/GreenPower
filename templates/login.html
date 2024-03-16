@@ -20,16 +20,13 @@
 <img style="position:absolute; top: 400px;left: 250px;" src="/static/images/Folder.png">
 <div class="login-container">
     <h7>로그인</h7>
-    <form>
-        <input type="text" placeholder="아이디" name="username" required>
+    {% if error %}
+    <script>alert("{{ error }}");</script>
+    {% endif %}
+    <form action="/login_confirm" method="post">
+        <input type="text" placeholder="아이디" name="id" required>
         <input type="password" placeholder="비밀번호" name="password" required>
-        <button type="submit">로그인</button>
+        <button type="submit" value="로그인">로그인</button>
     </form>
 </div>
-
-
-
-
-
-
 </body></html>

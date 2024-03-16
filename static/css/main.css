@@ -55,6 +55,20 @@ a{
     color:#ffffff;
 
 }
+
+.button_mypage_top {
+    margin-left: 30px; /* 이 부분이 버튼을 오른쪽으로 밀어냄 */
+    padding: 8px 30px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    font-size: 20px;
+   
+    
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .nav img {
     margin-right: 5px;
 }
@@ -128,13 +142,36 @@ top:10px;
     border:1px solid black;
 }
 
+.button_link_todo {
+    position:relative;
+    padding: 8px 30px;
+
+    margin:0px;
+    left:43%;
+    top:220px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    
+    font-size: 25px;
+    
+    text-transform: uppercase;
+    margin: 10px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.button_link_todo:hover {
+    background-color: #000000;
+    color:#ffffff;
+}
+
 .green{
    position: absolute;
     top:550px;
-   
-    
-
-
 }
 
 .button_todo {
