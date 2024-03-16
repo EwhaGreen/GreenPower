@@ -1,0 +1,214 @@
+body{
+
+    margin:0;
+    }
+    
+    
+    h1{
+        
+             color: #0CCC08;
+            font-family: Wanted Sans;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: left; 
+            margin-left : 76px; margin-top: 22px; margin-bottom: 22px;
+    }
+    h2{
+        position:relative;
+        text-align: center;
+        font-size: 30px; 
+        top:200px; 
+        
+    }
+    .nav {
+        display: flex;
+        position:absolute;
+        left: 73%;
+        top: 10px;
+        align-items: center;
+        
+    }
+    .button_login_top {
+        /* 로그인 버튼 스타일 */
+        margin-left: 30px; /* 이 부분이 버튼을 오른쪽으로 밀어냄 */
+        padding: 8px 30px;
+        background-color: #ffffff;
+        color: black;
+        border: 1px solid black;
+        font-size: 20px;
+       
+        
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button_login_top:hover{
+        background-color: #000000;
+        color:#ffffff;
+    
+    }
+    .nav img {body{
+
+        margin:0;
+        }
+        
+        
+        h1{
+            
+                 color: #0CCC08;
+                font-family: Wanted Sans;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-align: left; 
+                margin-left : 76px; margin-top: 22px; margin-bottom: 22px;
+        }
+        h2{
+            position:relative;
+            text-align: center;
+            font-size: 30px; 
+            top:200px; 
+            
+        }
+        .nav {
+            display: flex;
+            position:absolute;
+            left: 70%;
+            top: 10px;
+            align-items: center;
+            
+        }
+        .button_login_top {
+            /* 로그인 버튼 스타일 */
+            margin-left: 30px; /* 이 부분이 버튼을 오른쪽으로 밀어냄 */
+            padding: 8px 30px;
+            background-color: #ffffff;
+            color: black;
+            border: 1px solid black;
+            font-size: 20px;
+           
+            
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button_login_top:hover{
+            background-color: #000000;
+            color:#ffffff;
+        
+        }
+        .nav img {
+            margin-right: 5px;
+        }
+        
+        .nav p {
+            margin: 0 10px;
+        }
+    
+        .title{
+        position:absolute;
+        top: 17%;
+        /* left:430px; */
+        left:22%;
+        width: 800px;
+        height: 60px;
+        flex-shrink: 0;
+        color: var(--text, #111);
+        font-family: Pretendard;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    
+        border-bottom: 2px solid var(--text, #111);
+        background: #FFF;
+        }
+        .content {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+    
+            padding: 20px;
+            width: 800px;
+            top: 400px;
+            /* left: 410px; */
+            left:21%;
+        }
+    
+        .BOX {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 115px;
+            border: 1px solid #A8A8A8;
+            background-color:#0CCC08;
+            color:white;
+            font-size: 20px;
+            font-family: Pretendard;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+    
+        .BOX:hover {
+            background-color: #e0e0e0;
+            color: var(--grey, #656565);
+        }
+    
+        h3 {
+            position: absolute;
+            top: 250px;
+            /* left:430px; */
+            left:22%;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 23px;
+        }
+        input{
+            position: absolute;
+            width :790px;
+            height: 40px;
+            top: 720px;
+            /* left: 450px; */
+            left:22%;
+            font-size: 20px;
+            border-radius: 10px;
+            /* border-top: 1px #000000; */
+            border: none;
+       
+            outline:none;
+            
+        }
+        .register{
+            position:absolute;
+            top: 800px;
+            /* left:450px; */
+            left: 22%;
+            display: flex;
+            width: 800px;
+            height: 70px;
+            padding: 23px 0px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: var(--primary-base, #0CCC08);
+            color:#FFF;
+            font-size: 20px;
+        }
+        
+    
+        margin-right: 5px;
+    }
+    
+    .nav p {
+        margin: 0 10px;
+    }
