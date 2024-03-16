@@ -113,6 +113,7 @@ body{
         color: var(--grey, #656565);
     }
 
+
     h3 {
         position: absolute;
         top: 250px;
@@ -138,7 +139,7 @@ body{
         
         
     }
-    .register{
+    .button_register{
         position:absolute;
         top: 800px;
         /* left:450px; */

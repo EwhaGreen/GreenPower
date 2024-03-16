@@ -20,8 +20,8 @@ def read_todo():
     return render_template("todo.html")
 
 @application.route("/portfolio")
-def read_total_portfolio():
-    return render_template("total-portfolio.html")
+def read_todo_portfolio():
+    return render_template("todo_portfolio.html")
 
 @application.route("/todo_insert")
 def insert_todo():
