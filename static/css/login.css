@@ -4,7 +4,7 @@ body{
     }
     
     
-    h1{
+    .logo h1{
         
              color: #0CCC08;
             font-family: Wanted Sans;
@@ -15,17 +15,17 @@ body{
             text-align: left; 
             margin-left : 76px; margin-top: 22px; margin-bottom: 22px;
     }
-    h2{
+    /* h2{
         position:relative;
         text-align: center;
         font-size: 30px; 
         top:200px; 
         
-    }
+    } */
     .nav {
         display: flex;
         position:absolute;
-        left: 73%;
+        left: 70%;
         top: 10px;
         align-items: center;
         
@@ -69,3 +69,65 @@ body{
         line-height: 45px; /* 180% */
         letter-spacing: -0.25px;
     }
+    .login-container {
+        position:absolute;
+        left: 770px;
+        top: 200px;
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-container h7 {
+        position:absolute;
+        top:53px;
+        left:43px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .login-container form {
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 15px;
+        width: 370px;
+        left:30px;
+        top:150px;
+        
+            }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    
+    .login-container button {
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .login-container button:hover {
+        background-color: #449d44;
+    }
+    
