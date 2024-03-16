@@ -10,6 +10,7 @@ class DBhandler:
             firebase = pyrebase.initialize_app(config)
             self.db = firebase.database()
 
+# users 더미 데이터 생성
     def add_dummy_data(self):
         # 여러 사용자의 더미 데이터 정의
         users_data = {
@@ -66,15 +67,35 @@ class DBhandler:
         # 더미 데이터를 Firebase Realtime Database에 추가
         self.db.child("users").set(users_data)
 
+# 비밀번호 해시 함수
     def hash_password(self, password):
         return hashlib.sha256(password.encode('utf-8')).hexdigest()
 
+# 로그인 시 입력 데이터와 더미 데이터 비교
     def find_user(self, id, password_hash):
         users = self.db.child("users").get()
         for user in users.each():
             if user.val()['id'] == id and user.val()['password'] == password_hash:
                 return True, user.val()['name']
         return False, None
+
+# 단체 활동 DB로 전송
+    def add_group_activity(self, kind, name):
+        new_group_activity = {
+            "kind":kind,
+            "name":name
+        }
+
+        self.db.child("group_activities").push(new_group_activity)
+
+# 개인 활동 DB로 전송
+    def add_personal_activity(self, kind, name):
+        new_personal_activity = {
+            "kind":kind,
+            "name":name
+        }
+
+        self.db.child("personal_activities").push(new_personal_activity)
 
 # DBhandler 인스턴스 생성
 db_handler = DBhandler()

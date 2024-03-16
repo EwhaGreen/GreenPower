@@ -112,6 +112,11 @@ body{
             background-color: #e0e0e0;
             color: var(--grey, #656565);
         }
+
+        .BOX.active {
+            background-color: #e0e0e0; /* Replace #yourHoverColor with the color code you want */
+            color: #656565; /* Optional: Change text color if needed */
+        }  
     
         h3 {
             position: absolute;
