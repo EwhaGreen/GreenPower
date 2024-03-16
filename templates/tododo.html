@@ -47,28 +47,61 @@
         
               <div class="activity-container">
                 <div class="activity-title-container">
-                  <div class="activity-title-content">이화 컴퓨터동아리22</div>
+                  <div class="activity-title-content">
+                    <p style="position: relative;
+                    top:10px;
+                    left:30px;
+                    color: #5F5F5F;
+                    font-family: Pretendard;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;">동아리</p>
+                    <p style="color: #215FFF;
+                    position: relative;
+                    left:30px;
+                    top: 0px;
+                    font-family: Pretendard;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;">이화 컴퓨터 동아리</p></div>
                   <button class="activity-title-button" onclick="location.href='/todo_insert'">+</button><br />
                 </div>
         
                 <div class="activity-content-container">
                   <div class="activity-content-title">할일</div><br />
-                  <div class="activity-content-checklist">
-                    <ul>
-                      <li><span>✓</span><span>할일할일할일</span></li>
-                      <li><span>☐</span><span>할일할일할일</span></li>
-                      <li><span>☐</span><span>할일할일할일</span></li>
+                  <!-- <div class="activity-content-checklist">-->
+                    <ul class="activity-list"> 
+                        <li>
+                            <input type="checkbox" id="activity1" class="checkbox-custom">
+                            <label for="activity1"></label>
+                            프로젝트 회의
+                        </li>
+                        <li>
+                            <input type="checkbox" id="activity2" class="checkbox-custom">
+                            <label for="activity2"></label>
+                            프로젝트 회의
+                        </li>
+                        <li>
+                            <input type="checkbox" id="activity3" class="checkbox-custom">
+                            <label for="activity3"></label>
+                            프로젝트 회의
+                        </li>
+                        <li>
+                            <input type="checkbox" id="activity4" class="checkbox-custom">
+                            <label for="activity4"></label>
+                            프로젝트 회의
+                        </li>
+                        <!-- More list items here -->
                     </ul>
-                  </div>
+                    
+                  <!-- </div> -->
                 </div>
                 <div class="activity-content-container">
                   <div class="activity-content-title">느낀점</div><br />
-                  <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
-                    만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
-                    선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
-                    나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
-                    지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
-                </div>
+                  <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
+                </textarea></div>
               </div>
             </div>
         
@@ -88,28 +121,57 @@
         
               <div class="activity-container">
                 <div class="activity-title-container">
-                  <div class="activity-title-content">이화 컴퓨터동아리22</div>
-                  <button class="activity-title-button" onclick="location.href='/todo_insert'">+</button><br />
+                    <p style="position: relative;
+                    top:-10px;
+                    left:30px;
+                    color: #5F5F5F;
+                    font-family: Pretendard;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;">동아리</p>
+                    <p style="color: #215FFF;
+                    position: relative;
+                    left:-40px;
+                    top: 18px;
+                    font-family: Pretendard;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;">이화 컴퓨터 동아리</p> <button class="activity-title-button" onclick="location.href='/todo_insert'">+</button><br />
                 </div>
         
                 <div class="activity-content-container">
                   <div class="activity-content-title">할일</div><br />
-                  <div class="activity-content-checklist">
-                    <ul>
-                      <li><span>✓</span><span>할일할일할일</span></li>
-                      <li><span>☐</span><span>할일할일할일</span></li>
-                      <li><span>☐</span><span>할일할일할일</span></li>
-                    </ul>
-                  </div>
+                  <ul class="activity-list"> 
+                    <li>
+                        <input type="checkbox" id="activity1" class="checkbox-custom">
+                        <label for="activity1"></label>
+                        프로젝트 회의
+                    </li>
+                    <li>
+                        <input type="checkbox" id="activity2" class="checkbox-custom">
+                        <label for="activity2"></label>
+                        프로젝트 회의
+                    </li>
+                    <li>
+                        <input type="checkbox" id="activity3" class="checkbox-custom">
+                        <label for="activity3"></label>
+                        프로젝트 회의
+                    </li>
+                    <li>
+                        <input type="checkbox" id="activity4" class="checkbox-custom">
+                        <label for="activity4"></label>
+                        프로젝트 회의
+                    </li>
+                    <!-- More list items here -->
+                </ul>
+                
                 </div>
                 <div class="activity-content-container">
                   <div class="activity-content-title">느낀점</div><br />
-                  <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
-                    만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
-                    선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
-                    나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
-                    지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
-                </div>
+                  <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
+                    </textarea></div>
             </div>
     <script>
         function setActiveMonth(selectedElement) {
