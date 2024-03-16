@@ -1,6 +1,8 @@
 body{
 
 margin:0;
+width: 1440px;
+
 }
 
 
@@ -130,3 +132,14 @@ top:10px;
 
 }
 
+.button_todo {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.button_portfolio {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
