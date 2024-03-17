@@ -235,6 +235,7 @@ body{
         .activity-list {
             position: relative;
             left: 30px;
+            top: -10px;
             list-style-type: none;
             padding: 0;
         }
@@ -257,6 +258,8 @@ body{
             background: url('/static/images/circle.png') no-repeat; /* 체크 안 된 상태의 이미지 */
             cursor: pointer;
             background-size: contain;
+            
+            
         }
         
         .checkbox-custom:checked + label {

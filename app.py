@@ -26,7 +26,6 @@ def read_todo():
         group_todos[activity['id']] = todos
     return render_template("todo.html", group_activities=group_activities, personal_activities=personal_activities, group_todos=group_todos)
 
-
 @application.route("/portfolio_write")
 def read_todo_portfolio():
     return render_template("todo_portfoliowrite.html")
@@ -34,6 +33,7 @@ def read_todo_portfolio():
 @application.route("/portfolio")
 def todo_portfolio():
     return render_template("todo_portfolio.html")
+
 
 # group_todo_insert의 활동 정보 Read
 @application.route("/group_todo_insert")
@@ -49,6 +49,7 @@ def group_insert_todo():
         return redirect(url_for('read_todo'))
     # 조회한 활동 데이터를 템플릿으로 전달
     return render_template("/group_todo_insert.html", group_activity=group_activity)
+
 
 # personal_todo_insert의 활동 정보 Read
 # group_todo_insert랑 한 함수로 합칠 수 없으려나...
@@ -79,9 +80,9 @@ def login_user():
 
     user_found, user_name = DB.find_user(id, password_hash)
     if user_found:
-        session['id'] = id
+        session['id' ] = id
         session['name'] = user_name
-        return render_template("main.html")
+        return redirect(url_for("hello"))  # Redirect to the route that serves main.html
     else:
         error_message = "잘못된 ID 혹은 password를 입력하셨습니다."
         return render_template("login.html", error=error_message)
@@ -125,4 +126,4 @@ def submit_group_todo():
     return redirect(url_for('read_todo'))
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0')
+    application.run(host='0.0.0.0', debug=True)
