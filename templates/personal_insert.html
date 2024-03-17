@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <div style ="width : 1440px;"></div>
-    <link rel="stylesheet" type="text/css" href="../static/css/group_insert.css">
-</head>
-<body>
-    <header class ="logo"><h1>PORTODO</h1>
-    <div class = "nav">
-    <img class="icon_check" src="/static/images/check.png">
-    <p> To-Do</p>
-    <img class="icon_pofo" src="/static/images/pofo.png">
-    <p>Portfolio</p>
-    <button class="button_login_top">로그인</button> 
-    </div>
-    </header>
-    <hr width="100%" style = "border-bottom: 1px solid  #A8A8A8;">
+{% extends "navbar.html" %} 
+{% block content %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/personal_insert.css') }}">
+{% endblock %}
+
 <div class="title">
 개인활동추가
 <button type="button" style="position:absolute;left: 770px;border: none; background: transparent; padding: 0; outline: none;">
@@ -34,8 +23,6 @@
     <input type="text" name="activity_name" id="activity_name" placeholder="활동 이름을 입력해주세요.">
     <button type="submit" class="button_register">활동 등록하기</button>
 </form>
-</body></html>
-
 <script>
     function selectActivity(clickedDiv) {
         // Deselect all divs
@@ -50,3 +37,5 @@
         document.getElementById('selectedActivityKind').value = clickedDiv.getAttribute('data-value');
     }
 </script>
+</body>
+{% endblock %}
