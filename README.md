@@ -43,7 +43,45 @@
 <details>
   <summary>Click to toggle</summary>
   <pre>
-    
+├── app.py
+├── authentication
+│   └── firebase_auth.json
+├── database.py
+├── package-lock.json
+├── package.json
+├── static
+│   ├── css
+│   │   ├── grid.css
+│   │   ├── group_insert.css
+│   │   ├── login.css
+│   │   ├── main.css
+│   │   ├── personal_insert.css
+│   │   ├── todo.css
+│   │   ├── todo_insert.css
+│   │   ├── todo_portfolio.css
+│   │   └── todo_portfoliowrite.css
+│   └── images
+│       ├── Folder.png
+│       ├── check-circle.png
+│       ├── check.png
+│       ├── circle.png
+│       ├── green.png
+│       ├── people.png
+│       ├── pofo.png
+│       └── x-close.png
+└── templates
+    ├── grid.html
+    ├── group_insert.html
+    ├── group_todo_insert.html
+    ├── index.html
+    ├── login.html
+    ├── main.html
+    ├── navbar.html
+    ├── personal_insert.html
+    ├── personal_todo_insert.html
+    ├── todo.html
+    ├── todo_portfolio.html
+    └── todo_portfoliowrite.html
 </pre>
 </details>
 
