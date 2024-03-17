@@ -1,12 +1,23 @@
-# Portodo
+<div align="center">
+  
+# 🧚🏻 Portodo 🧚🏻
 
-<div align="center"><img src='https://ifh.cc/g/1zLD7J.jpg' border='0'></div><br>
-
+<img src='https://ifh.cc/g/1zLD7J.jpg' border='0'><br>
+</div>
 
 > 이화여자대학교 IT동아리 연합 해커톤 EWHA-thon에서 2024.04.15 ~ 2024.04.17까지 3일간 진행된 프로젝트입니다.
+
 <br>
 
-## 📍 기술스택
+## ⏳ Introduction
+Portodo는 사용자가 매일의 활동을 기록하고 할 일을 작성하며, 이를 토대로 한 줄 느낀 점을 기록하는 플랫폼입니다.<br>
+사용자는 한 달 동안의 활동과 느낀 점을 기록하여 자신의 일상을 추적하고, 다른 사용자들의 활동을 살펴보며 영감을 얻을 수 있습니다.<br>
+또한, 비슷한 진로나 관심사를 가진 다른 사용자들의 활동을 확인하고, 추천된 활동을 통해 목표진로에 도움을 받을 수 있습니다.<br>
+이 웹사이트는 사용자들이 자신의 일상을 조직화하고, 함께 성장하며, 영감을 주고 받을 수 있는 플랫폼입니다.
+
+<br>
+
+## 📍 Tech Stack
 
 | HTML | CSS | JavaScript | Flask | Firebase |
 |:--:|:--:|:--:|:--:|:--:|
@@ -87,7 +98,7 @@
 
   <br>
 
-## ⚙️ settings
+## ⚙️ Settings
 
 1. python version under 3.9
 
