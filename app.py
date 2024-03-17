@@ -20,10 +20,19 @@ def login():
 def read_todo():
     group_activities = DB.get_group_activities()
     personal_activities = DB.get_personal_activities()
-    return render_template("todo.html", group_activities=group_activities, personal_activities=personal_activities)
+    group_todos = {}
+    for activity in group_activities:
+        todos = DB.get_group_todos_by_activity_id(activity['id'])
+        group_todos[activity['id']] = todos
+    return render_template("todo.html", group_activities=group_activities, personal_activities=personal_activities, group_todos=group_todos)
+
+
+@application.route("/portfolio_write")
+def read_todo_portfolio():
+    return render_template("todo_portfoliowrite.html")
 
 @application.route("/portfolio")
-def read_todo_portfolio():
+def todo_portfolio():
     return render_template("todo_portfolio.html")
 
 # group_todo_insert의 활동 정보 Read
@@ -32,8 +41,12 @@ def group_insert_todo():
     activity_id = request.args.get('id')
     if activity_id:
         group_activity = DB.get_group_activity_by_id(activity_id)
+        if group_activity is None:
+            flash('해당 활동을 찾을 수 없습니다.')
+            return redirect(url_for('read_todo'))
     else:
-        group_activity = {'kind':'', 'name':''}
+        flash('활동 ID가 제공되지 않았습니다.')
+        return redirect(url_for('read_todo'))
     # 조회한 활동 데이터를 템플릿으로 전달
     return render_template("/group_todo_insert.html", group_activity=group_activity)
 
@@ -97,5 +110,19 @@ def add_personal_activity():
     flash('개인 활동이 성공적으로 등록되었습니다.')
     return redirect(url_for('read_todo'))
     
+# 
+@application.route("/submit_group_todo", methods=['POST'])
+def submit_group_todo():
+    activity_id = request.form['activity_id']
+    task1 = request.form['task1']
+    task2 = request.form['task2']
+    task3 = request.form['task3']
+    takeaway = request.form['takeaway']
+
+    DB.add_group_todo(activity_id, task1, task2, task3, takeaway)
+
+    flash('단체 활동 Todo가 성공적으로 등록되었습니다.')
+    return redirect(url_for('read_todo'))
+
 if __name__ == "__main__":
     application.run(host='0.0.0.0')

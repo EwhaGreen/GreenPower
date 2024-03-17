@@ -2,6 +2,11 @@ body{
 
     margin:0;
     }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
     
     
     .logo h1{
@@ -22,7 +27,7 @@ body{
         top:200px; 
         
     } */
-    .active_write{
+    .write{
         position:absolute;
         top: 230px;
         /* left:430px; */
@@ -36,8 +41,7 @@ body{
         font-style: normal;
         text-align: center;
         line-height: normal;
-    
-        border-bottom: 2px solid var(--text, #111);
+
         background: #FFF;
         }
     .active_recommend{

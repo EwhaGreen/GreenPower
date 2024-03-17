@@ -1,6 +1,7 @@
 import pyrebase
 import json
 import hashlib
+import requests
 
 class DBhandler:
     def __init__(self):
@@ -123,7 +124,7 @@ class DBhandler:
     def get_group_activity_by_id(self, activity_id):
         activity = self.db.child("group_activities").child(activity_id).get()
         if activity.val():
-            return activity.val()
+            return {"id": activity_id, "kind": activity.val().get('kind'), "name": activity.val().get('name')}
         else:
             return None
 
@@ -135,6 +136,51 @@ class DBhandler:
         else:
             return None
         
+# 특정 단체 활동의 todo 리스트 작성(Create)
+    def add_group_todo(self, activity_id, task1, task2, task3, takeaway):
+        new_group_todo = {
+            "activity_id": activity_id,
+            "task1": task1,
+            "task2": task2,
+            "task3": task3,
+            "takeaway": takeaway
+        }
+
+        self.db.child("group_todos").push(new_group_todo)
+
+# 특정 단체 활동의 모든 todo 리스트 가져오기(Read)
+    def get_group_todos_by_activity_id(self, activity_id):
+        # Correctly encode the orderBy query
+        todos = self.db.child("group_todos").order_by_child("activity_id").equal_to(activity_id).get()
+        if todos.val():
+            # Process and return todos as a list of dictionaries
+            return [{**todo.val(), "id": todo.key()} for todo in todos.each()]
+        else:
+            # Return an empty list if no todos are found
+            return []
+
+    
+    # Use this method instead of the one provided by pyrebase if you continue to have issues
+    def get_group_todos_by_activity_id(self, activity_id):
+        # Construct the URL for the Firebase REST API call
+        url = f"https://portodo-9c86a-default-rtdb.firebaseio.com/group_todos.json"
+        query = {
+            'orderBy': json.dumps("activity_id"),
+            'equalTo': json.dumps(activity_id)
+        }
+        response = requests.get(url, params=query)
+    
+        # Check if the request was successful
+        if response.status_code == 200:
+            todos = response.json()
+            # Process and return todos as a list of dictionaries
+            return [{**todo, "id": key} for key, todo in todos.items() if todo] if todos else []
+        else:
+            # Handle errors
+            print(f"Failed to retrieve todos: {response.text}")
+            return []
+
+
 
 # DBhandler 인스턴스 생성
 db_handler = DBhandler()

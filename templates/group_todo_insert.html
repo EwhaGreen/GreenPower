@@ -15,7 +15,8 @@
     </div>
     </header>
     <hr width="100%" style = "border-bottom: 1px solid  #A8A8A8;">
-<div class="title">
+<form action="/submit_group_todo" method="POST">
+    <div class="title">
 <div class="active_box">
     <h5>{{group_activity.kind}}</h5>
     <p>{{group_activity.name}}</p>
@@ -24,15 +25,17 @@
     <img src="/static/images/x-close.png" alt="Close" onclick="" style="display: block;">
 </button>
 </div>
-<h3>활동 이름을 입력해주세요. </h3>
+<h3>할 일을 입력해주세요. </h3>
 <div class="tasks_container" >
     
-    <input type="text" class="task_input"  placeholder="1. 할 일">
-    <input type="text" class="task_input"  placeholder="2. 할 일">
-    <input type="text" class="task_input"  placeholder="3. 할 일">
+    <input type="text" class="task_input" name="task1" placeholder="1. 할 일" required>
+    <input type="text" class="task_input" name="task2" placeholder="2. 할 일" required>
+    <input type="text" class="task_input" name="task3" placeholder="3. 할 일" required>
+    <input type="hidden" name="activity_id" value="{{ group_activity.id }}">
 
 </div>
-<h3 style="top: 570px">느낀점을 입력해주세요. </h3>
-<input type="text" class="mind_input" placeholder="느낀점을 입력해주세요.">
-<button class="register">활동 등록하기</button>
+<h3 style="top: 500px">느낀점을 입력해주세요. </h3>
+<textarea class="mind_input" placeholder="느낀점을 입력해주세요." rows="6" name="takeaway"></textarea>
+<button type="submit" class="register">To-do 등록하기</button>
+</form>
 </body></html>

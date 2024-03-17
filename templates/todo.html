@@ -71,58 +71,57 @@
                     font-weight: 700;
                     line-height: normal;">{{group_activity.name}}</p>
           </div>
-          <button class="activity-title-button" onclick="location.href='/group_todo_insert?id={{group_activity.id}}'">+</button><br />
+          <button class="activity-title-button"
+            onclick="location.href='/group_todo_insert?id={{group_activity.id}}'">+</button><br />
         </div>
 
         <div class="activity-content-container">
           <div class="activity-content-title">할일</div><br />
           <!-- <div class="activity-content-checklist">-->
           <ul class="activity-list">
+            {% for todo in group_todos[group_activity.id] %}
             <li>
-              <input type="checkbox" id="activity1" class="checkbox-custom">
-              <label for="activity1"></label>
-              프로젝트 회의
+              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
+              <label for="activity{{ loop.index }}"></label>{{ todo.task1 }}
             </li>
             <li>
-              <input type="checkbox" id="activity2" class="checkbox-custom">
-              <label for="activity2"></label>
-              프로젝트 회의
+              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
+              <label for="activity{{ loop.index }}"></label>{{ todo.task2 }}
             </li>
             <li>
-              <input type="checkbox" id="activity3" class="checkbox-custom">
-              <label for="activity3"></label>
-              프로젝트 회의
+              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
+              <label for="activity{{ loop.index }}"></label>{{ todo.task3 }}
             </li>
-            <!-- More list items here -->
+            {% endfor %}
           </ul>
-
-          <!-- </div> -->
         </div>
         <div class="activity-content-container">
           <div class="activity-content-title">느낀점</div><br />
-          <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
-                </textarea>
+          {% for todo in group_todos[group_activity.id] %}
+          <textarea class="activity-content-text" name="reflection" rows="4" cols="50" readonly>
+      {{ todo.takeaway }}
+    </textarea>
+          {% endfor %}
         </div>
       </div>
-    </div>
-    {% endfor %}
+      {% endfor %}
 
 
 
 
-    <div class="individual-activities">
-      <div class="activity-header">
-        <h8>개인 활동</h8>
-        <hr>
-        <button class="long-button-gray" onclick="location.href='/personal_insert'">활동 추가하기</button><br />
-      </div>
+      <div class="individual-activities">
+        <div class="activity-header">
+          <h8>개인 활동</h8>
+          <hr>
+          <button class="long-button-gray" onclick="location.href='/personal_insert'">활동 추가하기</button><br />
+        </div>
 
 
 
-      {% for personal_activity in personal_activities %}
-      <div class="activity-container">
-        <div class="activity-title-container">
-          <p style="position: relative;
+        {% for personal_activity in personal_activities %}
+        <div class="activity-container">
+          <div class="activity-title-container">
+            <p style="position: relative;
                     top:-10px;
                     left:30px;
                     color: #5F5F5F;
@@ -131,7 +130,7 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;">{{personal_activity.kind}}</p>
-          <p style="color: #215FFF;
+            <p style="color: #215FFF;
                     position: relative;
                     left:-90px;
                     top: 18px;
@@ -140,48 +139,49 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;">{{personal_activity.name}}</p>
-                    <button class="activity-title-button" onclick="location.href='/personal_todo_insert?id={{personal_activity.id}}'">+</button><br />
-        </div>
+            <button class="activity-title-button"
+              onclick="location.href='/personal_todo_insert?id={{personal_activity.id}}'">+</button><br />
+          </div>
 
-        <div class="activity-content-container">
-          <div class="activity-content-title">할일</div><br />
-          <ul class="activity-list">
-            <li>
-              <input type="checkbox" id="activity1" class="checkbox-custom">
-              <label for="activity1"></label>
-              프로젝트 회의
-            </li>
-            <li>
-              <input type="checkbox" id="activity2" class="checkbox-custom">
-              <label for="activity2"></label>
-              프로젝트 회의
-            </li>
-            <li>
-              <input type="checkbox" id="activity3" class="checkbox-custom">
-              <label for="activity3"></label>
-              프로젝트 회의
-            </li>
-            <!-- More list items here -->
-          </ul>
+          <div class="activity-content-container">
+            <div class="activity-content-title">할일</div><br />
+            <ul class="activity-list">
+              <li>
+                <input type="checkbox" id="activity1" class="checkbox-custom">
+                <label for="activity1"></label>
+                프로젝트 회의
+              </li>
+              <li>
+                <input type="checkbox" id="activity2" class="checkbox-custom">
+                <label for="activity2"></label>
+                프로젝트 회의
+              </li>
+              <li>
+                <input type="checkbox" id="activity3" class="checkbox-custom">
+                <label for="activity3"></label>
+                프로젝트 회의
+              </li>
+              <!-- More list items here -->
+            </ul>
 
-        </div>
-        <div class="activity-content-container">
-          <div class="activity-content-title">느낀점</div><br />
-          <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
+          </div>
+          <div class="activity-content-container">
+            <div class="activity-content-title">느낀점</div><br />
+            <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
                     </textarea>
+          </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
 
-      <script>
-        function setActiveMonth(selectedElement) {
-          document.querySelectorAll('.month_button').forEach(function (button) {
-            button.classList.remove('active');
-          });
+        <script>
+          function setActiveMonth(selectedElement) {
+            document.querySelectorAll('.month_button').forEach(function (button) {
+              button.classList.remove('active');
+            });
 
-          selectedElement.classList.add('active');
-        }
-      </script>
+            selectedElement.classList.add('active');
+          }
+        </script>
 
 </body>
 
