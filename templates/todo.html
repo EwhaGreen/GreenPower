@@ -38,6 +38,10 @@
     <div class="month_button" onclick="setActiveMonth(this)">24 일</div>
   </div>
   <div class="grid-container">
+
+    {% for group_activity in group_activities %} 
+     
+
     <div class="group-activities">
       <div class="activity-header">
         <h8>단체 활동</h8>
@@ -48,7 +52,7 @@
 
 
 
-      {% for group_activity in group_activities %}
+      
       <div class="activity-container">
         <div class="activity-title-container">
           <div class="activity-title-content">
@@ -74,24 +78,19 @@
           <button class="activity-title-button"
             onclick="location.href='/group_todo_insert?id={{group_activity.id}}'">+</button><br />
         </div>
-
+        
         <div class="activity-content-container">
           <div class="activity-content-title">할일</div><br />
-          <!-- <div class="activity-content-checklist">-->
           <ul class="activity-list">
             {% for todo in group_todos[group_activity.id] %}
-            <li>
-              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task1 }}
-            </li>
-            <li>
-              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task2 }}
-            </li>
-            <li>
-              <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task3 }}
-            </li>
+              {% set counter = 1 %}
+              {% for task in todo.tasks %}
+                <li>
+                  <input type="checkbox" id="activity{{ group_activity.id }}_{{ loop.index }}_{{ counter }}" class="checkbox-custom">
+                  <label for="activity{{ group_activity.id }}_{{ loop.index }}_{{ counter }}">{{ task }}</label>
+                </li>
+                {% set counter = counter + 1 %}
+              {% endfor %}
             {% endfor %}
           </ul>
         </div>
@@ -99,8 +98,7 @@
           <div class="activity-content-title">느낀점</div><br />
           {% for todo in group_todos[group_activity.id] %}
           <textarea class="activity-content-text" name="reflection" rows="4" cols="50" readonly>
-      {{ todo.takeaway }}
-    </textarea>
+      {{ todo.takeaway }}</textarea>
           {% endfor %}
         </div>
       </div>
@@ -109,6 +107,7 @@
 
 
 
+      {% for personal_activity in personal_activities %}
       <div class="individual-activities">
         <div class="activity-header">
           <h8>개인 활동</h8>
@@ -118,7 +117,6 @@
 
 
 
-        {% for personal_activity in personal_activities %}
         <div class="activity-container">
           <div class="activity-title-container">
             <p style="position: relative;
@@ -145,33 +143,28 @@
 
           <div class="activity-content-container">
             <div class="activity-content-title">할일</div><br />
-            <ul class="activity-list">
-              <li>
-                <input type="checkbox" id="activity1" class="checkbox-custom">
-                <label for="activity1"></label>
-                프로젝트 회의
-              </li>
-              <li>
-                <input type="checkbox" id="activity2" class="checkbox-custom">
-                <label for="activity2"></label>
-                프로젝트 회의
-              </li>
-              <li>
-                <input type="checkbox" id="activity3" class="checkbox-custom">
-                <label for="activity3"></label>
-                프로젝트 회의
-              </li>
-              <!-- More list items here -->
-            </ul>
-
-          </div>
-          <div class="activity-content-container">
-            <div class="activity-content-title">느낀점</div><br />
-            <textarea class="activity-content-text" name="reflection" rows="4" cols="50">
-                    </textarea>
-          </div>
+           <ul class="activity-list">
+            {% for todo in group_todos[group_activity.id] %}
+              {% set counter = 1 %}
+              {% for task in todo.tasks %}
+                <li>
+                  <input type="checkbox" id="activity{{ group_activity.id }}_{{ loop.index }}_{{ counter }}" class="checkbox-custom">
+                  <label for="activity{{ group_activity.id }}_{{ loop.index }}_{{ counter }}">{{ task }}</label>
+                </li>
+                {% set counter = counter + 1 %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
         </div>
-        {% endfor %}
+        <div class="activity-content-container">
+          <div class="activity-content-title">느낀점</div><br />
+          {% for todo in group_todos[group_activity.id] %}
+          <textarea class="activity-content-text" name="reflection" rows="4" cols="50" readonly>
+      {{ todo.takeaway }}</textarea>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
 
         <script>
           function setActiveMonth(selectedElement) {
