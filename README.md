@@ -30,6 +30,11 @@ Portodo는 ‘포트폴리오 + 투두’라는 뜻으로 자신의 커리어를
 
 <br>
 
+## 📍 System Architectures
+![alt text](<Slide 16_9 - 37.png>)
+
+<br>
+
 ## 👩‍💻 Roles
 <img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/67866773?v=4">
 
