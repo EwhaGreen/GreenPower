@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div style ="width : 1440px;"></div>
+    <link rel="stylesheet" type="text/css" href="../static/css/todo.css">
+</head>
+<body>
+    <header class ="logo"><h1>PORTODO</h1>
+    <div class = "nav">
+    <img class="icon_check" src="/static/images/check.png">
+    <p> To-Do</p>
+    <img class="icon_pofo" src="/static/images/pofo.png">
+    <p>Portfolio</p>
+    <button class="button_login_top">로그인</button> 
+    </div>
+    </header>
+    <hr width="100%" style = "border-bottom: 1px solid  #A8A8A8;">
+    <h7 style="position:absolute;
+    left:220px;
+    top:150px;
+    color: #0CCC08;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;">3월</h7>
+    <div class="month_selector">
+       
+        <div class="month_button" onclick="setActiveMonth(this)">18 월</div>
+        <div class="month_button"onclick="setActiveMonth(this)">19 화</div>
+        <div class="month_button" onclick="setActiveMonth(this)">20 수</div>
+        <div class="month_button" onclick="setActiveMonth(this)">21 목</div>
+        <div class="month_button" onclick="setActiveMonth(this)">22 금</div>
+        <div class="month_button" onclick="setActiveMonth(this)">23 토</div>
+        <div class="month_button"onclick="setActiveMonth(this)">24 일</div>
+         </div>
+         <div class="grid-container">
+            <div class="group-activities">
+              <div class="activity-header">
+                <h8>단체 활동</h8>
+                <hr>
+                <button class="long-button-gray" onclick="location.href='/group_insert'">활동 추가하기</button><br />
+              </div>
+        
+        
+        
+        
+              <div class="activity-container">
+                <div class="activity-title-container">
+                  <div class="activity-title-content">이화 컴퓨터동아리22</div>
+                  <button class="activity-title-button" onclick="location.href='/todo_insert'">+</button><br />
+                </div>
+        
+                <div class="activity-content-container">
+                  <div class="activity-content-title">할일</div><br />
+                  <div class="activity-content-checklist">
+                    <ul>
+                      <li><span>✓</span><span>할일할일할일</span></li>
+                      <li><span>☐</span><span>할일할일할일</span></li>
+                      <li><span>☐</span><span>할일할일할일</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="activity-content-container">
+                  <div class="activity-content-title">느낀점</div><br />
+                  <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
+                    만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
+                    선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
+                    나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
+                    지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
+                </div>
+              </div>
+            </div>
+        
+        
+        
+        
+        
+            <div class="individual-activities">
+              <div class="activity-header">
+                <h8>개인 활동</h8>
+                <hr>
+                <button class="long-button-gray" onclick="location.href='/personal_insert'">활동 추가하기</button><br />
+              </div>
+        
+        
+        
+        
+              <div class="activity-container">
+                <div class="activity-title-container">
+                  <div class="activity-title-content">이화 컴퓨터동아리22</div>
+                  <button class="activity-title-button" onclick="location.href='/todo_insert'">+</button><br />
+                </div>
+        
+                <div class="activity-content-container">
+                  <div class="activity-content-title">할일</div><br />
+                  <div class="activity-content-checklist">
+                    <ul>
+                      <li><span>✓</span><span>할일할일할일</span></li>
+                      <li><span>☐</span><span>할일할일할일</span></li>
+                      <li><span>☐</span><span>할일할일할일</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="activity-content-container">
+                  <div class="activity-content-title">느낀점</div><br />
+                  <div class="activity-content-text">이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서
+                    만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔)
+                    선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은 지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를
+                    나타낸다. 이화의 교훈은 1930년 무렵 당시 문과 교수이던 김상용(金尙鎔) 선생이 간결하고 명확한 '진, 선, 미'를 제안하였고, 교수회의에서 만장일치로 이것을 받아들임으로써 제정되었다. 진은
+                    지(知), 즉 학문의 전당으로서 이화가 추구해야 할 구체적인 가치를 나타낸다.</div>
+                </div>
+            </div>
+    <script>
+        function setActiveMonth(selectedElement) {
+            document.querySelectorAll('.month_button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+            
+            selectedElement.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
