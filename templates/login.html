@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <div style ="width : 1440px;"></div>
-    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    <div style="width : 1440px;"></div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
+
 <body>
-    <header class ="logo"><h1>PORTODO</h1>
-    <div class = "nav">
-    <img class="icon_check" src="/static/images/check.png">
-    <p> To-Do</p>
-    <img class="icon_pofo" src="/static/images/pofo.png">
-    <p>Portfolio</p>
-    <button class="button_login_top">로그인</button> 
-    </div>
+    <header class="logo">
+        <a href="/">
+            <h1>PORTODO</h1>
+        </a>
+        <div class="nav">
+            <img class="icon_check" src="/static/images/check.png">
+            <button class="button_todo" onclick="location.href='/todo'"> To-Do</button>
+            <img class="icon_pofo" src="/static/images/pofo.png">
+            <button class="button_portfolio" onclick="location.href='/portfolio_write'">Portfolio</button>
+            {% if session['id'] %}
+            <button class="button_mypage_top">{{ session['name']}}</button>
+            {% else %}
+            <button class="button_login_top" onclick="location.href='/login'">로그인</button>
+            {% endif %}
+        </div>
     </header>
-    <hr width="100%" style = "border-bottom: 1px solid  #A8A8A8;">
+    <hr width="100%" style="border-bottom: 1px solid  #A8A8A8;">
 
     <h6>PORTODO에서는<br> AI가 자동으로 활동을 기록해줘요!</h6>
-<img style="position:absolute; top: 400px;left: 250px;" src="/static/images/Folder.png">
-<div class="login-container">
-    <h7>로그인</h7>
-    {% if error %}
-    <script>alert("{{ error }}");</script>
-    {% endif %}
-    <form action="/login_confirm" method="post">
-        <input type="text" placeholder="아이디" name="id" required>
-        <input type="password" placeholder="비밀번호" name="password" required>
-        <button type="submit" value="로그인">로그인</button>
-    </form>
-</div>
-</body></html>
+    <img style="position:absolute; top: 400px;left: 250px;" src="/static/images/Folder.png">
+    <div class="login-container">
+        <h7>로그인</h7>
+
+        <form action="/login_confirm" method="post">
+            <input type="text" placeholder="아이디" name="id" required>
+            <input type="password" placeholder="비밀번호" name="password" required>
+            <button type="submit" value="로그인">로그인</button>
+        </form>
+    </div>
+</body>
+
+</html>
