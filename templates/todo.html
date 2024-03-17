@@ -82,15 +82,15 @@
             {% for todo in group_todos[group_activity.id] %}
             <li>
               <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task1 }}
+              <label for="activity{{ loop.index }}"></label>   {{ todo.task1 }}
             </li>
             <li>
               <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task2 }}
+              <label for="activity{{ loop.index }}"></label>   {{ todo.task2 }}
             </li>
             <li>
               <input type="checkbox" id="activity{{ loop.index }}" class="checkbox-custom">
-              <label for="activity{{ loop.index }}"></label>{{ todo.task3 }}
+              <label for="activity{{ loop.index }}"></label>   {{ todo.task3 }}
             </li>
             {% endfor %}
           </ul>
@@ -132,7 +132,7 @@
                     line-height: normal;">{{personal_activity.kind}}</p>
             <p style="color: #215FFF;
                     position: relative;
-                    left:-90px;
+                    left:-230px;
                     top: 18px;
                     font-family: Pretendard;
                     font-size: 20px;

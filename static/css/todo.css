@@ -57,10 +57,11 @@ body{
     }
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
         gap: 20px;
         position:relative;
         top:100px;
+        grid-template-columns: 1fr 1fr;
     }
     
     /* Activity Container Styling */
@@ -86,10 +87,14 @@ body{
     /* Group Activities Styling */
     .group-activities {
         border-color: rgb(255, 255, 255);
+        
     }
     
     .individual-activities {
         border-color: #000;
+        position:absolute;
+        left:700px;
+        top:0px;
     }
     
     
@@ -160,8 +165,8 @@ body{
         line-height: normal;
     }
     .activity-title-button{
-        position: relative;
-        left: 130px;
+        position: absolute;
+        left: 370px;
         margin-left: 150px;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -230,6 +235,7 @@ body{
         .activity-list {
             position: relative;
             left: 30px;
+            top: -10px;
             list-style-type: none;
             padding: 0;
         }
@@ -252,6 +258,8 @@ body{
             background: url('/static/images/circle.png') no-repeat; /* 체크 안 된 상태의 이미지 */
             cursor: pointer;
             background-size: contain;
+            
+            
         }
         
         .checkbox-custom:checked + label {
