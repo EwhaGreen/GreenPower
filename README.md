@@ -5,6 +5,22 @@
 
 > 이화여자대학교 IT동아리 연합 해커톤 EWHA-thon에서 2024.04.15 ~ 2024.04.17까지 3일간 진행된 프로젝트입니다.
 
+## 📍 기술스택
+
+
+| HTML | CSS | JavaScript | Flask | Firebase |
+|:--:|:--:|:--:|:--:|:--:|
+|<img height="50px" src="https://cdn.svgporn.com/logos/html-5.svg">|<img height="50px" src="https://cdn.svgporn.com/logos/css-3.svg">|<img height="50px" src="https://cdn.svgporn.com/logos/javascript.svg">|<img height="50px" src="https://cdn.svgporn.com/logos/flask.svg">|<img height="50px" src="https://cdn.svgporn.com/logos/firebase.svg">|
+
+- HTML/CSS
+- JavaScript
+- React
+- redux
+- redux-saga
+- Tailwindcss
+- Styled-components
+
+<br>
 
 ## 👩‍💻 Roles
 <img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/67866773?v=4">
